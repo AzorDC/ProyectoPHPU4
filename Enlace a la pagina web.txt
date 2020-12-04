@@ -1,0 +1,6 @@
+https://graphicsfactory.000webhostapp.com/index.html
+
+Nota: Lo que es la parte de php no sirve bien, ya que
+como le comente en clases, la pagina aunque le arreglara
+el error de inicio de sesion no funciona y usted 
+nos dijo que este host daba problemas con ese error

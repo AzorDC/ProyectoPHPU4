@@ -1,0 +1,45 @@
+CREATE DATABASE IF NOT EXISTS tododb;
+Use tododb;
+
+CREATE TABLE IF NOT EXISTS usuario
+(
+us_id INT(9) AUTO_INCREMENT PRIMARY KEY,
+us_nombre VARCHAR(255),
+us_pass VARCHAR(255) NOT NULL,
+us_correo VARCHAR(255) NOT NULL,
+us_tarjeta VARCHAR(255),
+us_tipous BIT NOT NULL DEFAULT 0
+);
+
+CREATE TABLE IF NOT EXISTS productos
+(
+prod_id INT(9) AUTO_INCREMENT PRIMARY KEY,
+prod_nombre VARCHAR(255) NOT NULL, 
+prod_precio MEDIUMINT(9) NOT NULL,
+prod_stock TINYINT(3) NOT NULL,
+prod_tiempo MEDIUMINT(9) NOT NULL
+);
+
+CREATE TABLE IF NOT EXISTS compra
+(
+com_id INT(9) AUTO_INCREMENT PRIMARY KEY,
+fk_prod_id INT(9),
+fk_us_id INT(9),
+com_fecha DATE NOT NULL,
+com_tipopago VARCHAR(30) NOT NULL,
+com_cantidad TINYINT(3) NOT NULL DEFAULT 1,
+FOREIGN KEY (fk_prod_id) REFERENCES productos(prod_id),
+FOREIGN KEY (fk_us_id) REFERENCES usuario(us_id)
+);
+
+INSERT INTO productos
+VALUES (1,"Edicion en HD", 200, 10, 10),
+(2,"Imagen Animada", 500, 10, 10),
+(3,"Imagen con Filtro o Editada", 350, 10, 10),
+(4,"Imgen Comica Sin Sentido", 300, 10, 10)
+
+INSERT INTO usuario
+VALUES (1,"Admin", "ayylmao", "correo@gmail.com", TarjetaAdmin, 1),
+(2,"Cliente 1", "contraseña1", "cliente1@gmail.com", "TarjetaCliente1", 0),
+(3,"Cliente 2", "contraseña2", "cliente2@gmail.com", "TarjetaCliente2", 0),
+(4,"Cliente 3", "contraseña3", "cliente3@gmail.com", "TarjetaCliente3", 0)

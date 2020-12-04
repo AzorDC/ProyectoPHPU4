@@ -1,0 +1,146 @@
+.fondo{
+    background-color:#85c4ea;
+}
+
+.fondo h1{
+    font-size: 3rem;
+    padding: 0;
+    text-align: center;
+    text-decoration: underline;
+}
+
+.fondo h2{
+    padding: 0;
+    font-size: 1.3rem;
+    text-align: start;
+}
+
+.fondo-footer{
+    color: white;
+    text-align: center;
+    align-items: center;
+    background-color: blue;
+    margin: 0;
+}
+
+.fondo-footer a{
+    color: rgb(6, 219, 6);
+}
+
+.fondo-footer a:hover{
+    color: yellow;
+}
+
+.seleccion ul{
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: #5e5cff;
+}
+
+.seleccion li{
+    float: left;
+    list-style: none;
+}
+
+.seleccion li a{
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+}
+
+.seleccion li a:hover{
+    background-color: #2421ff;
+}
+
+.icono-reloj, .icono-tostadora{
+    display: flex;
+    justify-content: left;
+    float: left;
+    align-items: center;
+    width:6rem;
+}
+
+.icono-jesus{
+    flex-basis: calc(33.3% - 1rem); /*Hace que cada elemento (icono) mida el 33.3% del 100% de la pantalla, menos 10*/
+    justify-content: left;
+}
+
+.icono-monachina, .icono-walter, .icono-pogchamp{
+    width: 10rem;
+    float: inline-end;
+}
+
+.icono-giftime{
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.centrar-texto{
+    text-align: center;
+    text-decoration: underline;
+    font-size: 2.3rem;
+    font-weight: 2;
+}
+
+.centrar-imagen{
+    display:block;
+    margin:auto;
+    width: 44rem;
+}
+
+.descripcion-parrafo{
+    font-size: 1rem;
+}
+
+.imagen-derecha{
+    display:block;
+    float: right;
+    width: 24rem;
+}
+
+.iconito{
+    width: 2rem;
+}
+
+.anuncio{
+    flex: 0 0 calc(33.3% - 1rem);
+    border: 1px solid black; 
+    margin-bottom: 2rem;
+}
+
+.contenido-anuncio{
+    padding: 2rem;
+}
+
+.contenedor-anuncios{
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+.grid-configurado{
+    display: grid;
+    grid-template-columns: auto auto auto;
+    padding: 10px;
+}
+
+.grid-item {
+    background-color: rgba(255, 255, 255, 0.8);
+    border: 1px solid rgba(0, 0, 0, 0.8);
+    padding: 20px;
+    font-size: 30px;
+    text-align: center;
+}
+
+.grid-clientes {
+    background-color: rgba(255, 255, 255, 0.8);
+    border: 1px solid rgba(0, 0, 0, 0.8);
+    display: grid;
+    grid-template-columns: 300px;
+    grid-template-rows: 200px;
+  }
+  
